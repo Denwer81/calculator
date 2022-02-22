@@ -23,7 +23,7 @@
   border-radius: 25px;
   background-color: rgb(240, 240, 240, .2);
   color: rgb(50, 50, 50, .9);
-  font-size: 55px;
+  font-size: 52px;
   white-space: nowrap;
   overflow: hidden;
   padding-right: 10px;
@@ -34,8 +34,8 @@
 .calculator__screen-additional_operand {
   position: absolute;
   width: 400px;
-  top: 10px;
-  left: 15px;
+  bottom: 70px;
+  left: 25px;
   margin: 0;
   padding: 0;
   font-size: 28px;
@@ -114,8 +114,8 @@
     font-size: 40px;
   }
   .calculator__screen-additional_operand {
-    top: 10px;
-    left: 15px;
+    bottom: 50px;
+    left: 18px;
     font-size: 22px;
   }
   .calculator__screen-additional_operation {
@@ -144,11 +144,11 @@
     width: 320px;
   }
   .calculator__screen {
-    font-size: 35px;
+    font-size: 30px;
   }
   .calculator__screen-additional_operand {
-    top: 10px;
-    left: 5px;
+    bottom: 40px;
+    left: 10px;
     font-size: 16px;
   }
   .calculator__screen-additional_operation {
