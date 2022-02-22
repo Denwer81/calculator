@@ -97,11 +97,11 @@
 @media screen and (max-width: 495px) {
   .calculator {
     width: 400px;
-    height: 600px;
+    height: 650px;
     border-radius: 45px;
   }
   .calculator__screen {
-    height: 100px;
+    height: 130px;
     margin: 20px;
     border-radius: 25px;
     padding-right: 10px;
@@ -114,7 +114,7 @@
   }
   .calculator__pad-container {
     gap: 20px;
-    margin-top: 35px;
+    margin-top: 40px;
   }
   .calculator__btn {
     width: 60px;
@@ -124,7 +124,7 @@
   .calculator__btn_size_xl {
     width: 140px;
     border-radius: 60px;
-    padding-left: 30px;
+    padding-left: 25px;
   }
 }
 
