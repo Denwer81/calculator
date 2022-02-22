@@ -6,6 +6,7 @@ const calcPads = calculator.querySelector('.calculator__pad-container');
 let firstNumber = '';
 let secondNumber = '';
 let operation = '';
+let historyOperation = '';
 
 calcPads.addEventListener('click', (evt) => {
   const currentButton = evt.target;
@@ -98,21 +99,6 @@ function handleOperation(currentButton) {
   }
 }
 
-function clear() {
-  firstNumber = '0';
-  secondNumber = '';
-  operation = '';
-  calcScreen.textContent = '0';
-  calcSecondScreen.textContent = '';
-  calcOperationScreen.textContent = 'AC';
-  setTimeout(() => calcOperationScreen.textContent = '', 500);
-}
-
-function switchSing() {
-  firstNumber = String(0 - firstNumber);
-  calcScreen.textContent = firstNumber;
-}
-
 function handleMathOperation(buttonValue) {
   if (operation != "") {
     executeMathOperation(buttonValue);
@@ -128,13 +114,30 @@ function renderAfterOperation(buttonValue) {
     setTimeout(() => clear(), 500);
   } else {
     getCorrectNumberScreen();
+    historyOperation += `${firstNumber} ${operation} ${secondNumber}</br>`;
     secondNumber = firstNumber;
     firstNumber = '0';
     operation = buttonValue;
     calcScreen.textContent = '0';
-    calcSecondScreen.textContent = secondNumber;
+    calcSecondScreen.innerHTML = historyOperation;
     calcOperationScreen.textContent = buttonValue;
   }
+}
+
+function clear() {
+  firstNumber = '0';
+  secondNumber = '';
+  operation = '';
+  historyOperation = '';
+  calcScreen.textContent = '0';
+  calcSecondScreen.textContent = '';
+  calcOperationScreen.textContent = 'AC';
+  setTimeout(() => calcOperationScreen.textContent = '', 500);
+}
+
+function switchSing() {
+  firstNumber = String(0 - firstNumber);
+  calcScreen.textContent = firstNumber;
 }
 
 function executeMathOperation() {

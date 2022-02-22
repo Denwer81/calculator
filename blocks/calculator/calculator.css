@@ -1,11 +1,6 @@
 .calculator {
   display: flex;
   max-width: 500px;
-  /* height: 100%; */
-  /* background-color: #111; */
-  /* border-radius: 50px; */
-  /* border: 2px solid #777; */
-  /* box-shadow: 10px 10px 10px #000; */
 }
 .calculator__contaiter {
   display: flex;
@@ -13,8 +8,7 @@
   justify-content: space-between;
   margin: 20px;
   border-radius: 40px;
-  /* background-color: rgb(12, 12, 12); */
-  border: 2px solid rgb(224, 224, 224, .4);
+  border: 1px solid rgb(224, 224, 224, .6);
   overflow: hidden;
 }
 .calculator__screen {
@@ -27,10 +21,9 @@
   height: 100%;
   margin: 20px;
   border-radius: 25px;
-  /* border: 1px solid #000; */
-  background-color: rgb(240, 240, 240, .3);
+  background-color: rgb(240, 240, 240, .2);
   color: rgb(50, 50, 50, .9);
-  font-size: 60px;
+  font-size: 55px;
   white-space: nowrap;
   overflow: hidden;
   padding-right: 10px;
@@ -38,18 +31,24 @@
 .calculator__screen-main {
   margin: 0;
 }
-.calculator__screen-additional {
+.calculator__screen-additional_operand {
   position: absolute;
+  width: 400px;
   top: 10px;
   left: 15px;
-  font-size: 50px;
   margin: 0;
   padding: 0;
+  font-size: 28px;
   color: rgb(100, 100, 100, .9);
 }
-.calculator__screen-additional p {
-  display: inline;
+.calculator__screen-additional_operation {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
   margin: 0;
+  padding: 0;
+  font-size: 50px;
+  color: rgb(100, 100, 100, .4);
 }
 .calculator__pad-container {
   display: flex;
@@ -103,12 +102,10 @@
 @media screen and (max-width: 495px) {
   .calculator {
     width: 400px;
-    /* height: 650px; */
   }
   .calculator__contaiter {
     margin: 10px;
     border-radius: 20px;
-    border: 2px solid rgb(224, 224, 224, .4);
   }
   .calculator__screen {
     margin: 20px;
@@ -116,8 +113,13 @@
     padding-right: 10px;
     font-size: 40px;
   }
-  .calculator__screen-additional {
+  .calculator__screen-additional_operand {
     top: 10px;
+    left: 15px;
+    font-size: 22px;
+  }
+  .calculator__screen-additional_operation {
+    bottom: 5px;
     left: 15px;
     font-size: 35px;
   }
@@ -131,7 +133,7 @@
     font-size: 30px;
   }
   .calculator__btn_size_xl {
-    width: 140px;
+    width: 150px;
     border-radius: 60px;
     padding-left: 25px;
   }
@@ -144,10 +146,15 @@
   .calculator__screen {
     font-size: 35px;
   }
-  .calculator__screen-additional {
+  .calculator__screen-additional_operand {
     top: 10px;
-    left: 15px;
-    font-size: 25px;
+    left: 5px;
+    font-size: 16px;
+  }
+  .calculator__screen-additional_operation {
+    bottom: 5px;
+    left: 5px;
+    font-size: 30px;
   }
   .calculator__btn {
     width: 50px;
